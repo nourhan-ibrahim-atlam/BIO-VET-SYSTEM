@@ -1,0 +1,117 @@
+/* COMMON STYLE ==> */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui;
+    background-color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    color: #fff;
+}
+
+/* CHANGE PAGE ==> */
+.top-page {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+}
+
+.top-page a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    font-size: clamp(1rem , 1.3vw , 1.4rem);
+    text-transform: capitalize;
+}
+
+.top-page a:hover{
+    color: #040ea8;
+}
+
+.top-page span i:hover {
+    cursor: pointer;
+    color: #040ea8;
+}
+
+/* HEADER ==> */
+header {
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+/* INPUTs ==> */
+input {
+    width: 100%;
+    height: 25px;
+    padding: 5px 10px;
+    background-color: #111;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+input:focus {
+    background-color: black;
+    border: 1px solid #999;
+    transform: scale(1.1);
+}
+
+#create , 
+.search-btn ,
+.table-btn ,
+.delete-all ,
+#add-product {
+    width: 100%;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    padding: 5px 0;
+    font-size: clamp(1rem , 1.3vw , 1.4rem);
+    background-color: #040ea8;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.delete-all {
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+#create {
+    width: 100%;
+}
+
+#create:hover, 
+.search-btn:hover,
+.delete-all:hover,
+#add-product:hover {
+   transform: scale(1.1);
+}
+
+/* SEARCH ==> */
+.search {
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.search-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.search-btn {
+    width: 48%;
+}

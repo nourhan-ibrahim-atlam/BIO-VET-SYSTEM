@@ -1,0 +1,52 @@
+/* PRODUCT DETEAILS ==> */
+.price {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.price input {
+    width: 18%;
+}
+
+#total-product {
+    margin-right: 13px;
+}
+
+#total-product , #total-gain {
+    background-color: red;
+    padding: 5px 3px;
+}
+
+#total-product::before {
+    content: "Products: ";
+}
+
+#total-gain::before {
+    content: "Gain: ";
+}
+
+/* OUTPUT PRODUCTS ==> */
+table {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+th , td {
+    padding: 5px 0;
+}
+
+.table-btn {
+   width: 65%;
+   font-size: 1rem;
+   border-radius: 5px;
+   text-transform: capitalize;
+}
+
+.table-btn:hover {
+    opacity: 0.5;
+}
+
+#delete {
+    background-color: red;
+}

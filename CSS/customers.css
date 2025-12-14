@@ -1,0 +1,92 @@
+/* CUSTOMERS DETAILS ==> */
+.form div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form input {
+    width: 46%;
+}
+
+.invoice-inputs input {
+    width: 26%;
+}
+
+#add-product {
+    width: 12%;
+}
+
+/* INVOICES ==> */
+.invoices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.invoices-item {
+    width: 46%;
+    background-color: #fff;
+    color: #111;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.invoices .logo {
+    display: flex;
+    align-items: center;
+    direction: ltr;
+    text-transform: uppercase;
+}
+
+.invoices .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.invoice-customer {
+    margin-bottom: 10px;
+}
+
+#invoice-date::before {
+    content: "التاريخ: ";
+}
+
+#invoice-name::before {
+    content: "الأسم: ";
+}
+
+table {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #040ea8;
+    color: #fff;
+    border-color: #fff;
+}
+
+.monay {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1rem , 1.4vw , 1.5rem);
+    font-weight: bolder;
+}
+
+#total::before {
+    content: "المجموع: ";
+}
+
+.monay div > div {
+    padding-left: 5px;
+}
+
+#pay::before {
+    content: "المدفوع: ";
+}
+
+#residual::before {
+    content: "المتبقي: ";
+}
