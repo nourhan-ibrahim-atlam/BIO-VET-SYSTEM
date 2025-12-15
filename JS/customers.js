@@ -1,11 +1,17 @@
 // Dfine Variables ==>
 let name = document.getElementById("name");
 let date = document.getElementById("date");
+
 let product = document.getElementById("product");
 let count = document.getElementById("count");
 let price = document.getElementById("price");
 let addProduct = document.getElementById("add-product");
+
+let totalPrice = document.getElementById("total-price");
+let paid = document.getElementById("paid");
+
 let create = document.getElementById("create");
+
 
 // Add Product ==>
 let currentProducts = [];
@@ -40,7 +46,9 @@ function createInvoice() {
     let newInvoice = {
         name: name.value,
         date: date.value,
-        products: currentProducts
+        products: currentProducts,
+        totalPrice: totalPrice.value,
+        paid: paid.value
     }
 
     // Check Name & Date Are Full
@@ -64,6 +72,8 @@ function clearData() {
     product.value = "";
     count.value = "";
     price.value = "";
+    totalPrice.value = "";
+    paid.value = "";
 }
 
 // Show Invoices
@@ -74,7 +84,10 @@ function showInvoices() {
     document.querySelector(".invoices").innerHTML = "";
 
     // Loop On Invoices
-    for (let i = 0 ; i < invoices.length ; i++) {
+    for (let i = 0; i < invoices.length; i++) {
+
+        let residual = invoices[i].totalPrice - invoices[i].paid;
+        
         myHtml += `
             <div class="invoices-item">
                 <div class="logo">
@@ -99,10 +112,10 @@ function showInvoices() {
                     </tbody>
                 </table>
                 <div class="monay">
-                    <div id="total">2590</div>
+                    <div id="total">${invoices[i].totalPrice}</div>
                     <div>
-                        <div id="pay">1000</div>
-                        <div id="residual">1590</div>
+                        <div id="pay">${invoices[i].paid}</div>
+                        <div id="residual">${residual}</div>
                     </div>
                 </div>
             </div>
