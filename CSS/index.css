@@ -1,0 +1,138 @@
+/* ========== LANDING PAGE STYLES ========== */
+
+/* ========== HEADER ========== */
+
+.landing-header {
+  margin: 60px 0 80px;
+}
+
+.landing-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.landing-header p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* ========== CARDS SECTION ========== */
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* ========== CARD ========== */
+
+.card {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(4, 14, 168, 0.2);
+}
+
+/* ========== CARD ICON ========== */
+
+.card-icon {
+  font-size: 3.5rem;
+  color: #040ea8;
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ========== CARD TITLE ========== */
+
+.card h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ========== CARD DESCRIPTION ========== */
+
+.card p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: auto;
+  font-weight: 300;
+}
+
+/* ========== CARD ACTION ========== */
+
+.card-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 15px 20px;
+  background-color: #040ea8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  justify-content: center;
+  border: 2px solid #040ea8;
+}
+
+.card-action:hover {
+  background-color: transparent;
+  transform: translateX(5px);
+}
+
+.card-action i {
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-action:hover i {
+  transform: translateX(5px);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .landing-header {
+    margin: 40px 0 60px;
+  }
+
+  .card {
+    padding: 30px;
+    min-height: 380px;
+  }
+}
+
+.index-theme {
+  font-size: 1.8rem;
+}

@@ -1,90 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>BIO VET</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIO VET | Home</title>
 
     <!-- Icon -->
-    <link rel="Icon" href="Images/logo.jpg">
-
-    <!-- CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/products.css">
+    <link rel="icon" href="Images/BIO_VET.jpg" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
+  <body>
     <!-- Change Page -->
     <div class="top-page" dir="rtl">
-        <a href="customers.html" class="link-page">customers</a>
-        <span>
-            <i class="fa-solid fa-sun"></i>
-        </span>
+      <span id="theme-toggle" class="index-theme">
+        <i class="fa-solid fa-sun"></i>
+      </span>
     </div>
 
     <main class="container">
-        <!-- HEADER -->
-        <header>
-            <h1>bio vet</h1>
-            <p>product management system</p>
-        </header>
+      <!-- HEADER -->
+      <header class="landing-header">
+        <h1>BIO VET</h1>
+        <p>FOR MANAGEMENT SYSTEM</p>
+      </header>
 
-        <!-- PRODUCT DETEAILS -->
-        <section>
-            <input type="text" id="title" placeholder="Title...">
-            <div class="price">
-                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price...">
-                <input onkeyup="getTotal()" type="number" id="stored" placeholder="Stored...">
-                <input onkeyup="getTotal()" type="number" id="sale" placeholder="Sale...">
-                <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount...">
-                <small id="total-product"></small>
-                <small id="total-gain"></small>
-            </div>
-            <button id="create">create</button>
-        </section>
+      <!-- CARDS SECTION -->
+      <section class="cards-section">
+        <!-- PRODUCTS CARD -->
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <h2>PRODUCTS MANAGEMENT</h2>
+          <p>
+            Manage your product inventory efficiently. Add, edit, delete, and
+            view products with ease. Keep track of pricing, stock levels, and
+            sales information all in one place.
+          </p>
+          <a href="products.html" class="card-action">
+            <span>Go to products page</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
 
-        <!-- OUTPUT PRODUCTS -->
-        <section class="output">
-            <!-- SEARCH -->
-            <div class="search">
-                <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search...">
-                <div class="search-btns">
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-title">Search By Title</button>
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-price">Search By Price</button>
-                </div>
-            </div>
-
-            <!-- DELETE ALL -->
-            <div id="delete-all"></div>
-
-            <!-- TABLE -->
-            <table>
-                <!-- TABLE HEAD -->
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>title</th>
-                        <th>price</th>
-                        <th>stored</th>
-                        <th>sale</th>
-                        <th>discount</th>
-                        <th>products</th>
-                        <th>gain</th> 
-                        <th>update</th>
-                        <th>delete</th>
-                    </tr>
-                </thead>
-                <!-- TABLE BODY -->
-                <tbody></tbody>
-            </table>
-        </section>
+        <!-- CUSTOMERS CARD -->
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h2>CUSTOMERS MANAGEMENT</h2>
+          <p>
+            Handle customer information and transactions seamlessly. Manage
+            customer data, track invoices, and maintain a comprehensive record
+            of all customer interactions.
+          </p>
+          <a href="customers.html" class="card-action">
+            <span>Go to customers page</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
     </main>
 
-
-
-    <!-- JS File -->
+    <!-- JS FILE -->
     <script src="JS/main.js"></script>
-</body>
+  </body>
 </html>
