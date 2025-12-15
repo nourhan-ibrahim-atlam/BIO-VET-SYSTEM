@@ -1,117 +1,289 @@
-/* COMMON STYLE ==> */
+/* ========== COMMON STYLE ========== */
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: system-ui;
-    background-color: #333;
+  font-family: system-ui;
+  background-color: #333;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
 }
 
-/* CHANGE PAGE ==> */
+/* ========== CHANGE PAGE ========== */
+
 .top-page {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
 }
 
-.top-page a {
-    text-decoration: none;
-    color: #fff;
-    margin-left: 10px;
-    font-size: clamp(1rem , 1.3vw , 1.4rem);
-    text-transform: capitalize;
+.link-page {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  text-transform: capitalize;
 }
 
-.top-page a:hover{
-    color: #040ea8;
+.link-page:hover {
+  color: #040ea8;
 }
 
 .top-page span i:hover {
-    cursor: pointer;
-    color: #040ea8;
+  cursor: pointer;
+  color: #040ea8;
 }
 
-/* HEADER ==> */
+/* ========== HEADER ========== */
+
 header {
-    text-align: center;
-    margin: 10px 0;
-    text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+  text-transform: uppercase;
 }
 
-/* INPUTs ==> */
+/* ========== INPUTS ========== */
+
 input {
-    width: 100%;
-    height: 25px;
-    padding: 5px 10px;
-    background-color: #111;
-    border: none;
-    outline: none;
-    color: #fff;
+  width: 98%;
+  height: 25px;
+  padding: 5px 10px;
+  background-color: #111;
+  border: none;
+  outline: none;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
 input:focus {
-    background-color: black;
-    border: 1px solid #999;
-    transform: scale(1.1);
+  background-color: black;
+  border: 1px solid #999;
+  transform: scale(1.1);
 }
 
-#create , 
-.search-btn ,
-.table-btn ,
-.delete-all ,
+body.light-mode input {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #e0e0e0;
+}
+
+body.light-mode input:focus {
+  background-color: #f9f9f9;
+  border: 2px solid #040ea8;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(4, 14, 168, 0.2);
+}
+
+/* ========== BUTTONS ========== */
+
+#create,
+.search-btn,
+.table-btn,
+.delete-all,
 #add-product {
-    width: 100%;
-    border-radius: 20px;
-    height: 30px;
-    border: none;
-    padding: 5px 0;
-    font-size: clamp(1rem , 1.3vw , 1.4rem);
-    background-color: #040ea8;
-    color: #fff;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.5s ease-in-out;
-
+  width: 100%;
+  border-radius: 20px;
+  height: 30px;
+  border: none;
+  padding: 5px 0;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  background-color: #040ea8;
+  color: #fff;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
 }
 
-.delete-all {
-    margin-bottom: 20px;
-}
-
-/* BUTTONS */
-#create {
-    width: 100%;
-}
-
-#create:hover, 
+#create:hover,
 .search-btn:hover,
 .delete-all:hover,
 #add-product:hover {
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* SEARCH ==> */
+body.light-mode #create,
+body.light-mode .search-btn,
+body.light-mode .table-btn,
+body.light-mode .delete-all,
+body.light-mode #add-product {
+  background-color: #040ea8;
+  color: #fff;
+  border: none;
+}
+
+body.light-mode #create:hover,
+body.light-mode .search-btn:hover,
+body.light-mode .delete-all:hover,
+body.light-mode #add-product:hover {
+  background-color: #0309a0;
+  box-shadow: 0 4px 12px rgba(4, 14, 168, 0.3);
+  transform: scale(1.1);
+}
+
+.delete-all {
+  margin-bottom: 20px;
+}
+
+/* ========== SEARCH ========== */
+
 .search {
-    margin: 10px 0;
-    margin-bottom: 20px;
+  margin: 10px 0;
+  margin-bottom: 25px;
 }
 
 .search-btns {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 
 .search-btn {
-    width: 48%;
+  width: 48%;
+}
+
+/* ========== DARK MODE ========== */
+
+body.dark-mode {
+  background-color: #333;
+}
+
+body.dark-mode .container {
+  color: #fff;
+}
+
+body.dark-mode .card {
+  background-color: #222;
+}
+
+/* ========== LIGHT MODE ========== */
+
+body.light-mode {
+  background-color: #e9e9e9;
+}
+
+body.light-mode .container {
+  color: #333;
+}
+
+body.light-mode header {
+  color: #111;
+}
+
+body.light-mode header h1 {
+  color: #040ea8;
+  font-weight: 700;
+}
+
+body.light-mode header p {
+  color: #666;
+}
+
+body.light-mode .card {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+body.light-mode .card:hover {
+  box-shadow: 0 10px 30px rgba(4, 14, 168, 0.15);
+  border-color: #e0e8ff;
+}
+
+body.light-mode .card h2 {
+  color: #111;
+  font-weight: 600;
+}
+
+body.light-mode .card p {
+  color: #666;
+}
+
+body.light-mode .card-icon {
+  color: #040ea8;
+}
+
+body.light-mode .card-action {
+  background-color: #040ea8;
+  color: #fff;
+  border: 2px solid #040ea8;
+}
+
+body.light-mode .card-action:hover {
+  background-color: #fff;
+  color: #040ea8;
+  border-color: #040ea8;
+}
+
+body.light-mode .link-page {
+  color: #333;
+  font-weight: 500;
+}
+
+body.light-mode .link-page:hover {
+  color: #040ea8;
+}
+
+body.light-mode .top-page span i {
+  color: #666;
+}
+
+body.light-mode .top-page span i:hover {
+  color: #040ea8;
+}
+
+body.light-mode #theme-toggle {
+  color: #666;
+  font-size: 1.5rem;
+}
+
+body.light-mode #theme-toggle:hover {
+  color: #040ea8;
+}
+
+body.light-mode table {
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+body.light-mode table thead {
+  background-color: #e1e1e1;
+}
+
+body.light-mode table th {
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+  padding: 12px;
+}
+
+body.light-mode table td {
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+}
+
+body.light-mode table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* ========== THEME TOGGLE ========== */
+
+#theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#theme-toggle:hover {
+  color: #040ea8;
+  transform: rotate(20deg);
 }

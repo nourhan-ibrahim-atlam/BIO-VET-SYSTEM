@@ -30,6 +30,7 @@
     color: #111;
     padding: 10px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .invoices .logo {
@@ -90,3 +91,9 @@ table {
 #residual::before {
     content: "المتبقي: ";
 }
+
+/* HANDLE SEARCH INPUT ==> */
+.search input{
+    width: 98.04%;
+}
+
