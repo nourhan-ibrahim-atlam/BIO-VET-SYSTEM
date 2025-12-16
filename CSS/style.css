@@ -82,9 +82,10 @@ body.light-mode input:focus {
   box-shadow: 0 0 8px rgba(4, 14, 168, 0.2);
 }
 
-/* ========== BUTTONS ========== */
+/* BUTTONS ==> */
 
 #create,
+#update,
 .search-btn,
 .table-btn,
 .delete-all,

@@ -12,6 +12,8 @@ let paid = document.getElementById("paid");
 
 let create = document.getElementById("create");
 
+let editIndex = "";
+
 
 // Add Product ==>
 let currentProducts = [];
@@ -57,7 +59,14 @@ function createInvoice() {
 
     // Check Name & Date Are Full
     if (name.value != "" && date.value != "") {
-        invoices.push(newInvoice);
+
+        if (create.innerHTML == "Update") {
+            invoices[editIndex] = newInvoice;
+            create.innerHTML = "Create";
+        } else {
+            invoices.push(newInvoice);
+        }
+        
         clearData();
         showInvoices();
     }
@@ -99,6 +108,11 @@ function showInvoices() {
                     <div class="logo">
                         <img src="Images/logo.jpg" alt="logo">
                         <h2>bio vet</h2>
+                    </div>
+
+                    <div class="invoice-buttons">
+                        <button class="edit-invoice" onclick="editInvoice(${i})">Edit</button>
+                        <button class="delete-invoice" onclick="deleteInvoice(${i})">Delete</button>
                     </div>
                 </div>
 
@@ -184,10 +198,18 @@ function searchInvoice(value) {
             if (invoices[i].name.toLowerCase().includes(value.toLowerCase())) {
                 invoicesContainer += `
                     <div class="invoices-item">
-                        <div class="logo">
-                            <img src="Images/logo.jpg" alt="logo">
-                            <h2>bio vet</h2>
+                        <div class="invoices-header">
+                            <div class="logo">
+                                <img src="Images/logo.jpg" alt="logo">
+                                <h2>bio vet</h2>
+                            </div>
+
+                            <div class="invoice-buttons">
+                                <button class="edit-invoice" onclick="editInvoice(${i})">Edit</button>
+                                <button class="delete-invoice" onclick="deleteInvoice(${i})">Delete</button>
+                            </div>
                         </div>
+
                         <div class="invoice-customer">
                             <p id="invoice-date">${invoices[i].date}</p>
                             <h3 id="invoice-name">${invoices[i].name}</h3>
@@ -216,12 +238,19 @@ function searchInvoice(value) {
                 `;
             }
         } else {
-            if (products[i].date.includes(value)) {
+            if (invoices[i].date.includes(value)) {
                 invoicesContainer += `
                     <div class="invoices-item">
-                        <div class="logo">
-                            <img src="Images/logo.jpg" alt="logo">
-                            <h2>bio vet</h2>
+                        <div class="invoices-header">
+                            <div class="logo">
+                                <img src="Images/logo.jpg" alt="logo">
+                                <h2>bio vet</h2>
+                            </div>
+
+                            <div class="invoice-buttons">
+                                <button class="edit-invoice" onclick="editInvoice(${i})">Edit</button>
+                                <button class="delete-invoice" onclick="deleteInvoice(${i})">Delete</button>
+                            </div>
                         </div>
                         <div class="invoice-customer">
                             <p id="invoice-date">${invoices[i].date}</p>
@@ -254,6 +283,46 @@ function searchInvoice(value) {
 
         document.querySelector(".invoices").innerHTML = invoicesContainer;
     };
+}
+
+// Edit Invoice ==>
+function editInvoice(index) {
+    // Get Invoice Data
+    let invoice = invoices[index];
+
+    // Fill Inputs With Invoice Data
+    name.value = invoice.name;
+    date.value = invoice.date;
+    totalPrice.value = invoice.totalPrice;
+    paid.value = invoice.paid;
+    currentProducts = invoice.products;
+
+    // update Create Button
+    create.innerText = "Update";
+
+    // Set Edit Index
+    editIndex = index;  
+
+    // scroll To Top
+    scroll({
+        top: 0,
+        behavior: "smooth"
+    });
+
+
+}
+
+
+// Delete Invoice ==>
+function deleteInvoice(index) {
+    // Delete Invoice From Array
+    invoices.splice(index, 1);
+
+    // Save New Invoices To LocalStorage
+    localStorage.setItem("invoices", JSON.stringify(invoices));
+
+    // Show Invoices After Delete
+    showInvoices();
 }
 
 

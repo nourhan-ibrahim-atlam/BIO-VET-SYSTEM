@@ -33,7 +33,12 @@
     border-radius: 10px;
 }
 
-
+.invoices-header {
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
 
 .invoices .logo {
     display: flex;
@@ -50,7 +55,24 @@
     margin-right: 15px;
 }
 
+.invoice-buttons {
+    display: flex;
+    gap: 10px;
+}
 
+.invoice-buttons button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #040ea8;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.invoice-buttons button:hover {
+    transform: scale(1.1);
+}
 
 
 .invoice-customer {
