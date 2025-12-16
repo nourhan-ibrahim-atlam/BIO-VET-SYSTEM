@@ -127,7 +127,7 @@ function showProducts() {
     // Check Products In LocalStorage Is Empty
     if (localStorage.getItem("products") && localStorage.getItem("products") != "[]") {
         document.getElementById("delete-all").innerHTML = `
-            <button onclick="deleteAllProducts()" class="delete-all">delete all (${products.length})</button>
+            <button onclick="deleteAllProducts()" class="delete-all">delete all(${products.length})</button>
         `;
     } else {
         document.getElementById("delete-all").innerHTML = "";
@@ -156,13 +156,16 @@ function deleteAllProducts() {
 
 // Update Product ==>
 function updateProduct(index) {
+    // Set Values
     title.value = products[index].title;
     price.value = products[index].price;
     stored.value = products[index].stored;
     sale.value = products[index].sale;
     discount.value = products[index].discount;
     getTotal();
+
     create.innerHTML = "update";
+
     // Change Mood
     mode = "update";
 

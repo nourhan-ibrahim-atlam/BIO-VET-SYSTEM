@@ -1,6 +1,6 @@
-/* ========== LANDING PAGE STYLES ========== */
+/*  LANDING PAGE STYLES ==> */
 
-/* ========== HEADER ========== */
+/* HEADER ==> */
 
 .landing-header {
   margin: 60px 0 80px;
@@ -20,7 +20,7 @@
   opacity: 0.9;
 }
 
-/* ========== CARDS SECTION ========== */
+/* CARDS SECTION ==> */
 
 .cards-section {
   display: grid;
@@ -29,7 +29,7 @@
   margin-bottom: 60px;
 }
 
-/* ========== CARD ========== */
+/* CARD ==> */
 
 .card {
   background-color: #1a1a1a;
@@ -47,7 +47,7 @@
   box-shadow: 0 15px 50px rgba(4, 14, 168, 0.2);
 }
 
-/* ========== CARD ICON ========== */
+/* CARD ICON ==> */
 
 .card-icon {
   font-size: 3.5rem;
@@ -60,7 +60,7 @@
   transform: scale(1.1) rotate(5deg);
 }
 
-/* ========== CARD TITLE ========== */
+/* CARD TITLE ==> */
 
 .card h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -71,7 +71,7 @@
   color: #fff;
 }
 
-/* ========== CARD DESCRIPTION ========== */
+/* CARD DESCRIPTION ==> */
 
 .card p {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
@@ -81,7 +81,7 @@
   font-weight: 300;
 }
 
-/* ========== CARD ACTION ========== */
+/* CARD ACTION ==> */
 
 .card-action {
   display: flex;
@@ -115,7 +115,11 @@
   transform: translateX(5px);
 }
 
-/* ========== RESPONSIVE ========== */
+.index-theme {
+  font-size: 1.8rem;
+}
+
+/* RESPONSIVE ==> */
 
 @media (max-width: 768px) {
   .cards-section {
@@ -133,6 +137,5 @@
   }
 }
 
-.index-theme {
-  font-size: 1.8rem;
-}
+
+

@@ -33,6 +33,8 @@
     border-radius: 10px;
 }
 
+
+
 .invoices .logo {
     display: flex;
     align-items: center;
@@ -47,6 +49,9 @@
     border: 2px solid #fff;
     margin-right: 15px;
 }
+
+
+
 
 .invoice-customer {
     margin-bottom: 10px;

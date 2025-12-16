@@ -1,4 +1,4 @@
-// ========== THEME TOGGLE ==========
+//  THEME TOGGLE ==>
 const themeToggle = document.getElementById("theme-toggle");
 
 if (themeToggle) {
@@ -23,7 +23,7 @@ if (themeToggle) {
   });
 }
 
-// Update theme icon
+// Update theme icon based on current theme ==>
 function updateThemeIcon(theme) {
   const icon = themeToggle.querySelector("i");
   if (theme === "dark-mode") {

@@ -58,15 +58,12 @@
         <section class="output">
             <!-- SEARCH -->
             <div class="search">
-                <input type="text" id="search" placeholder="Search...">
+                <input onkeyup="searchInvoice(this.value)" type="text" id="search" placeholder="Search...">
                 <div class="search-btns">
-                    <button class="search-btn" id="by-title">Search By Title</button>
-                    <button class="search-btn" id="by-price">Search By Price</button>
+                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-name">Search By Name</button>
+                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-date">Search By Date</button>
                 </div>
             </div>
-
-            <!-- DELETE ALL -->
-            <div id="delete-all"></div>
 
             <!-- INVOICES -->
             <div class="invoices" dir="rtl">

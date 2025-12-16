@@ -50,3 +50,15 @@ th , td {
 #delete {
     background-color: red;
 }
+
+/* RESPONSIVE ==> */
+@media (max-width: 768px) {
+    .price input {
+        width: 30%;
+    }
+
+    .table-btn {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
