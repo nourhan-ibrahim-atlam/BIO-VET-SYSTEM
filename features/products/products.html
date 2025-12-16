@@ -1,91 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>BIO VET | PRODUCTS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Icon -->
-    <link rel="Icon" href="/assets/images/logo.jpg">
+        <title>BIO VET – Product & Inventory Management</title>
 
-    <!-- CSS File -->
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="./styles/products.css">
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Manage products, stock levels, pricing, and inventory efficiently using BIO VET product management system." />
+        <meta name="author" content="BIO VET Team" />
+        <meta name="robots" content="index, follow" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Change Page -->
-    <div class="top-page" dir="rtl">
-        <a href="../customers/customers.html" class="link-page">customers</a>
-        <span id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </span>
-    </div>
+        <link rel="canonical" href="https://www.biovet.com/products" />
 
-    <main class="container">
-        <!-- HEADER -->
-        <header>
-            <h1>bio vet</h1>
-            <p>product management system</p>
-        </header>
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="BIO VET – Product & Inventory Management" />
+        <meta
+            property="og:description"
+            content="Efficient product and inventory management with BIO VET management system." />
+        <meta
+            property="og:image"
+            content="https://www.biovet.com/assets/images/logo.jpg" />
+        <meta property="og:url" content="https://www.biovet.com/products" />
+        <meta property="og:site_name" content="BIO VET" />
 
-        <!-- PRODUCT DETEAILS -->
-        <section>
-            <input type="text" id="title" placeholder="Title...">
-            <div class="price">
-                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price...">
-                <input onkeyup="getTotal()" type="number" id="stored" placeholder="Stored...">
-                <input onkeyup="getTotal()" type="number" id="sale" placeholder="Sale...">
-                <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount...">
-                <small id="total-product"></small>
-                <small id="total-gain"></small>
-            </div>
-            <button id="create">create</button>
-        </section>
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BIO VET – Product & Inventory Management" />
+        <meta
+            name="twitter:description"
+            content="Manage products and inventory efficiently using BIO VET." />
+        <meta
+            name="twitter:image"
+            content="https://www.biovet.com/assets/images/logo.jpg" />
 
-        <!-- OUTPUT PRODUCTS -->
-        <section class="output">
-            <!-- SEARCH -->
-            <div class="search">
-                <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search...">
-                <div class="search-btns">
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-title">Search By Title</button>
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-price">Search By Price</button>
+        <!-- App / UI -->
+        <meta name="theme-color" content="#0f172a" />
+        <meta name="application-name" content="BIO VET" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+        <!-- Icon -->
+        <link rel="icon" href="/assets/images/logo.jpg" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/products.css" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+        </head>
+    <body>
+        <!-- Change Page -->
+        <div class="top-page" dir="rtl">
+            <a href="../customers/customers.html" class="link-page">customers</a>
+            <span id="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </span>
+        </div>
+
+        <main class="container">
+            <!-- HEADER -->
+            <header>
+                <h1>bio vet</h1>
+                <p>product management system</p>
+            </header>
+
+            <!-- PRODUCT DETEAILS -->
+            <section>
+                <input type="text" id="title" placeholder="Title...">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="Price...">
+                    <input onkeyup="getTotal()" type="number" id="stored" placeholder="Stored...">
+                    <input onkeyup="getTotal()" type="number" id="sale" placeholder="Sale...">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount...">
+                    <small id="total-product"></small>
+                    <small id="total-gain"></small>
                 </div>
-            </div>
+                <button id="create">create</button>
+            </section>
 
-            <!-- DELETE ALL -->
-            <div id="delete-all"></div>
+            <!-- OUTPUT PRODUCTS -->
+            <section class="output">
+                <!-- SEARCH -->
+                <div class="search">
+                    <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search...">
+                    <div class="search-btns">
+                        <button onclick="getSearchMode(this.id)" class="search-btn" id="by-title">Search By Title</button>
+                        <button onclick="getSearchMode(this.id)" class="search-btn" id="by-price">Search By Price</button>
+                    </div>
+                </div>
 
-            <!-- TABLE -->
-            <table>
-                <!-- TABLE HEAD -->
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>title</th>
-                        <th>price</th>
-                        <th>stored</th>
-                        <th>sale</th>
-                        <th>discount</th>
-                        <th>products</th>
-                        <th>gain</th> 
-                        <th>update</th>
-                        <th>delete</th>
-                    </tr>
-                </thead>
-                <!-- TABLE BODY -->
-                <tbody></tbody>
-            </table>
-        </section>
-    </main>
+                <!-- DELETE ALL -->
+                <div id="delete-all"></div>
+
+                <!-- TABLE -->
+                <table>
+                    <!-- TABLE HEAD -->
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>title</th>
+                            <th>price</th>
+                            <th>stored</th>
+                            <th>sale</th>
+                            <th>discount</th>
+                            <th>products</th>
+                            <th>gain</th> 
+                            <th>update</th>
+                            <th>delete</th>
+                        </tr>
+                    </thead>
+                    <!-- TABLE BODY -->
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
 
 
 
-    <!-- JS File -->
-    <script src="/js/main.js"></script>
-    <script src="./js/products.js"></script>
-</body>
+        <!-- JS File -->
+        <script src="/js/main.js"></script>
+        <script src="./js/products.js"></script>
+    </body>
 </html>

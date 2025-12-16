@@ -1,80 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>BIO VET | CUSTOMERS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BIO VET – Customer Management</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+        name="description"
+        content="Manage customers, invoices, and customer data efficiently with BIO VET customer management system." />
+    <meta name="author" content="BIO VET Team" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://www.biovet.com/customers" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BIO VET – Customer Management" />
+    <meta
+        property="og:description"
+        content="Manage customers and invoices efficiently using BIO VET management system." />
+    <meta
+        property="og:image"
+        content="https://www.biovet.com/assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.biovet.com/customers" />
+    <meta property="og:site_name" content="BIO VET" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BIO VET – Customer Management" />
+    <meta
+        name="twitter:description"
+        content="Efficient customer and invoice management with BIO VET." />
+    <meta
+        name="twitter:image"
+        content="https://www.biovet.com/assets/images/logo.jpg" />
+
+    <!-- App / UI -->
+    <meta name="theme-color" content="#333333" />
+    <meta name="application-name" content="BIO VET" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Icon -->
-    <link rel="Icon" href="/assets/images/logo.jpg">
+    <link rel="icon" href="/assets/images/logo.jpg" />
 
-    <!-- CSS File -->
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="./styles/customers.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/customers.css" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Change Page -->
-    <div class="top-page" dir="rtl">
-        <a href="../products/products.html" class="link-page">products</a>
-        <span id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </span>
-    </div>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    </head>
+    
+    <body>
+        <!-- Change Page -->
+        <div class="top-page" dir="rtl">
+            <a href="../products/products.html" class="link-page">products</a>
+            <span id="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </span>
+        </div>
 
-    <main class="container">
-        <!-- HEADER -->
-        <header>
-            <h1>bio vet</h1>
-            <p>customers management system</p>
-        </header>
+        <main class="container">
+            <!-- HEADER -->
+            <header>
+                <h1>bio vet</h1>
+                <p>customers management system</p>
+            </header>
 
-        <!-- CUSTOMERS DETAILS -->
-        <section class="form">
-            <!-- NAME && DATE -->
-            <div>
-                <input type="text" placeholder="Name..." id="name">
-                <input type="date" id="date">
-            </div>
-            <!-- INVOICE DETAILS -->
-            <div class="invoice-inputs">
-                <input type="text" placeholder="Product Name..." id="product">
-                <input type="number" placeholder="Count..." id="count">
-                <input type="number" placeholder="Price..." id="price">
-                <button id="add-product">add</button>
-            </div>
-
-            <div class="total-price">
-                <input type="number" placeholder="Total Price..." id="total-price">
-                <input type="number" placeholder="Paid..." id="paid">
-            </div>
-
-            <button id="create">create</button>
-        </section>
-
-        <!-- OUTPUT INVOICE -->
-        <section class="output">
-            <!-- SEARCH -->
-            <div class="search">
-                <input onkeyup="searchInvoice(this.value)" type="text" id="search" placeholder="Search...">
-                <div class="search-btns">
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-name">Search By Name</button>
-                    <button onclick="getSearchMode(this.id)" class="search-btn" id="by-date">Search By Date</button>
+            <!-- CUSTOMERS DETAILS -->
+            <section class="form">
+                <!-- NAME && DATE -->
+                <div>
+                    <input type="text" placeholder="Name..." id="name">
+                    <input type="date" id="date">
                 </div>
-            </div>
+                <!-- INVOICE DETAILS -->
+                <div class="invoice-inputs">
+                    <input type="text" placeholder="Product Name..." id="product">
+                    <input type="number" placeholder="Count..." id="count">
+                    <input type="number" placeholder="Price..." id="price">
+                    <button id="add-product">add</button>
+                </div>
 
-            <!-- INVOICES -->
-            <div class="invoices" dir="rtl">
-                
-            </div>
-        </section>
-    </main>
+                <div class="total-price">
+                    <input type="number" placeholder="Total Price..." id="total-price">
+                    <input type="number" placeholder="Paid..." id="paid">
+                </div>
+
+                <button id="create">create</button>
+            </section>
+
+            <!-- OUTPUT INVOICE -->
+            <section class="output">
+                <!-- SEARCH -->
+                <div class="search">
+                    <input onkeyup="searchInvoice(this.value)" type="text" id="search" placeholder="Search...">
+                    <div class="search-btns">
+                        <button onclick="getSearchMode(this.id)" class="search-btn" id="by-name">Search By Name</button>
+                        <button onclick="getSearchMode(this.id)" class="search-btn" id="by-date">Search By Date</button>
+                    </div>
+                </div>
+
+                <!-- INVOICES -->
+                <div class="invoices" dir="rtl">
+                    
+                </div>
+            </section>
+        </main>
 
 
-    <!-- Js File -->
-    <script src="/js/main.js"></script>
-     <script src="./js/customers.js"></script>
-</body>
+        <!-- Js File -->
+        <script src="/js/main.js"></script>
+        <script src="./js/customers.js"></script>
+    </body>
 </html>
