@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.biovet.com/</loc>
+        <loc>https://biove-system.netlify.app</loc>
         <lastmod>2025-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.biovet.com/features/products/products.html</loc>
+        <loc>https://biove-system.netlify.app/features/products/products</loc>
         <lastmod>2025-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.biovet.com/features/customers/customers.html</loc>
+        <loc>https://biove-system.netlify.app/features/customers/customers</loc>
         <lastmod>2025-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
